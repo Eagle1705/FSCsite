@@ -158,17 +158,16 @@ body.scrolled {
 
 
 /* Hero Section */
-#hero {
-    position: relative;
-    height: 100vh; /* Occupa tutta l'altezza dello schermo */
-    background-color: var(--background-color); /* Tema dinamico */
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: rgb(255, 255, 255);
-}
+    #hero {
+        position: relative;
+        height: 100vh;
+        background: url('../images/sfondi/image.png') center center / cover no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: rgb(255, 255, 255);
+    }
   /* Variabili tema */
   :root {
     --background-color: #001f3e;
