@@ -13,6 +13,8 @@ body {
     font-size: 18px;
     overflow-x: hidden;
     background-color: #000; /* Colore di fallback */
+    font-family: "Audiowide", sans-serif;
+
 }
   /* Variabili tema */
   :root {
@@ -412,6 +414,8 @@ nav ul li a:hover::after {
     color: #e7e7e7;
     padding: 40px 20px;
     font-size: 0.9rem;
+    font-family: "Roboto", sans-serif;
+
 }
 
 .footer-container {
