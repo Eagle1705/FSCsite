@@ -400,7 +400,8 @@ body.scrolled {
 
 .navbar-menu ul li a {
     text-decoration: none;
-    font-size: clamp(14px, 2vw, 18px);
+    font-size: 16px;
+    font-weight: bold;
     color: #ffffff; /* Testo bianco */
     transition: color 0.3s ease;
 }
@@ -456,6 +457,28 @@ nav ul li a::after {
 nav ul li a:hover::after {
     transform: scaleX(1); /* Mostra la barra quando si va in hover */
 }
+@media (max-width: 768px) {
+  /* Quando scrolli su mobile, ignora lo stile .scrolled */
+  .navbar.scrolled {
+    /* Ripristina le proprietà originali */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;        /* stessa altezza pre-scroll */
+    margin: 0;           /* niente margini extra */
+    border-radius: 0;    /* rimuove i bordi arrotondati */
+    box-shadow: none;    /* rimuove l’ombra */
+    background: linear-gradient(to right, #e03d1e, black, #0069ad);
+    transition: none;    /* disabilita transizioni su mobile */
+  }
+
+  /* Se avevi cambiato l’altezza su .navbar.scrolled via JS */
+  .navbar {
+    position: fixed;
+  }
+}
+
 @media (max-width: 768px) {
   .navbar {
     padding: 0 10px;     /* meno spazio laterale */
