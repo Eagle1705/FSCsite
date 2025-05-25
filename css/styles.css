@@ -16,6 +16,56 @@ body {
     font-family: "Audiowide", sans-serif;
 
 }
+/* Sezione Reclutamento */
+.reclutamento-section {
+    position: relative;
+    height: 100vh;
+    background: url('../images/sfondi/gpo.jpg') center center / cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .reclutamento-overlay {
+    /* Glassmorphism */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    
+    /* Conserva padding, larghezza e testo */
+    padding: 2rem;
+    border-radius: 0.5rem;
+    max-width: 500px;
+    color: #fff;
+  }
+  
+  
+  .reclutamento-overlay h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .reclutamento-overlay p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .btn-reclutamento {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #e03d1e;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 0.3rem;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-reclutamento:hover {
+    background-color: #b52e14;
+  }
+  
   /* Variabili tema */
   :root {
     --background-color: #001f3f;
