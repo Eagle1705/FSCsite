@@ -732,13 +732,14 @@ nav ul li a:hover::after {
   }
   .navbar-menu ul li a {
     padding: 0 8px;
-    font-size: clamp(12px, 3vw, 14px);
+    font-size: clamp(14px, 2vw, 18px);
   }
 
   /* ====== Hero section verticale ====== */
   .hero {
     flex-direction: column;
     padding: 10px;
+      padding-top: 190px;
   }
   .hero-divider {
     width: 70%;
