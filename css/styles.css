@@ -400,8 +400,7 @@ body.scrolled {
 
 .navbar-menu ul li a {
     text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
+    font-size: clamp(14px, 2vw, 18px);
     color: #ffffff; /* Testo bianco */
     transition: color 0.3s ease;
 }
@@ -457,6 +456,23 @@ nav ul li a::after {
 nav ul li a:hover::after {
     transform: scaleX(1); /* Mostra la barra quando si va in hover */
 }
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 10px;     /* meno spazio laterale */
+  }
+
+  .navbar-menu ul {
+    gap: 10px;           /* spaziatura ridotta fra i link */
+    flex-wrap: wrap;     /* consente alle righe di andare a capo */
+    justify-content: center;
+  }
+
+  .navbar-menu ul li a {
+    /* se vuoi abbassare ancora: */
+    font-size: 14px;
+  }
+}
+
 
 /* Footer Generale */
 .footer {
