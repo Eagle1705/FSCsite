@@ -472,7 +472,12 @@ nav ul li a:hover::after {
     font-size: 14px;
   }
 }
-
+@media (max-width: 360px) {
+  .navbar-menu ul li a {
+    font-size: 14px;      /* o quello che preferisci */
+    line-height: 60px;    /* lascia invariato per mantenere il centraggio */
+  }
+}
 
 /* Footer Generale */
 .footer {
