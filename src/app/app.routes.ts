@@ -10,7 +10,7 @@ export const routes: Routes = [
     { path: 'home', redirectTo: '' },
     { path: 'electric', component: ElectricComponent },
     { path: 'form', component: FormComponent },
-    { path: 'managment', component: ManagmentComponent },
+    { path: 'management', component: ManagmentComponent },
     { path: 'mechanics', component: MechanicsComponent },
     { path: '**', component: HomeComponent },
 ];

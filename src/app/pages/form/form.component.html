@@ -1,71 +1,79 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FSC Racing Team</title>
-    <link rel="stylesheet" href="./styles.scss">
-    <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-<link rel="shortcut icon" href="images/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
-<meta name="apple-mobile-web-app-title" content="FSC Racing Team" />
-<link rel="manifest" href="images/site.webmanifest" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Roboto">
-<style>
-    .form-section {
-        background: url('../images/sfondi/aerodinamica.jpg')center center / cover no-repeat;;
-        padding: 60px 20px;
-        color: white;
-        text-align: center;
-      }
-      .form-section h2 {
-        font-size: 2.5rem;
-        margin-bottom: 20px;
-        text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-      }
-      .form-container {
-        /* wrapper responsivo 16:9 */
-        position: relative;
-        width: 100%;
-        max-width: 960px;
-        margin: 0 auto;
-        padding-bottom: 56.25%; /* 16:9 */
-        box-shadow: 0 8px 16px rgba(0,0,0,0.4);
-        border-radius: 12px;
-        overflow: hidden;
-        background: white;
-      }
-      .form-container iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: 0;
-      }
-    .body {
-        font-family: "Audiowide", sans-serif;
-    }
+    <link rel="stylesheet" href="./form.component.scss">
+    <link rel="icon" type="image/png" href="/assets/images/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="FSC Racing Team" />
+    <link rel="manifest" href="/assets/images/site.webmanifest" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Roboto">
+    <style>
+        .form-section {
+            background: url('/assets/images/sfondi/aerodinamica.jpg')center center / cover no-repeat;
+            ;
+            padding: 60px 20px;
+            color: white;
+            text-align: center;
+        }
+
+        .form-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-container {
+            /* wrapper responsivo 16:9 */
+            position: relative;
+            width: 100%;
+            max-width: 960px;
+            margin: 0 auto;
+            padding-bottom: 56.25%;
+            /* 16:9 */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+            border-radius: 12px;
+            overflow: hidden;
+            background: white;
+        }
+
+        .form-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .body {
+            font-family: "Audiowide", sans-serif;
+        }
     </style>
 </head>
+
 <body>
 
     <div id="loading-screen">
-        <img src="images/gifpc.gif" alt="Logo pc" class="loading-logo-desktoponly">
-        <img src="images/gifmobile.gif" alt="Logo mobile" class="loading-logo-mobileonly">
+        <img src="/assets/images/gifpc.gif" alt="Logo pc" class="loading-logo-desktoponly">
+        <img src="/assets/images/gifmobile.gif" alt="Logo mobile" class="loading-logo-mobileonly">
     </div>
 
     <header class="navbar">
         <div class="navbar-container">
-            <a href="index.html">
-            <img src="images/logo.png" alt="Logo FSC" class="navbar-logo">
+            <a [routerLink]="['/']">
+                <img src="/assets/images/logo.png" alt="Logo FSC" class="navbar-logo">
             </a>
             <nav class="navbar-menu">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <!--<li><a href="#squadra">la nostra squadra</a></li> -->
+                    <li><a [routerLink]="['/']">Home</a></li>
+                    <!--<li><a href="squadra">la nostra squadra</a></li> -->
                     <li><a href="doom/index.html">ㅤ</a></li>
                 </ul>
             </nav>
@@ -77,22 +85,23 @@
         <h2>Vieni A Gareggiare Con Noi!</h2>
         <h3>Compila il form e sarai contattato da noi!</h3>
         <div class="form-container">
-          <!-- Sostituisci l'URL qui con quello del tuo form Google -->
-          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfbZVavJsxDBoxBzApaHR7nDqUIQyT01pm4xxM05TIQktstgg/viewform?embedded=true"
-                  allowfullscreen>
-          </iframe>
+            <!-- Sostituisci l'URL qui con quello del tuo form Google -->
+            <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSfbZVavJsxDBoxBzApaHR7nDqUIQyT01pm4xxM05TIQktstgg/viewform?embedded=true"
+                allowfullscreen>
+            </iframe>
         </div>
-      </section>
+    </section>
 
     <div class="divisore"></div>
     <footer class="footer">
         <div class="footer-container">
             <!-- Logo e descrizione -->
             <div class="footer-logo">
-                <img src="images/logo.png" alt="Logo FSC">
-                
+                <img src="/assets/images/logo.png" alt="Logo FSC">
+
             </div>
-    
+
             <!-- Navigazione -->
             <div class="footer-nav">
                 <h3>Link Utili</h3>
@@ -103,7 +112,7 @@
                     <li><a href="#Contatti">Contatti</a></li>
                 </ul>
             </div>
-    
+
             <!-- Contatti -->
             <div class="footer-contact">
                 <h3>Contatti</h3>
@@ -111,7 +120,7 @@
                     <li>Email: <a href="mailto:fsc_generale@outlook.it">fsc_generale&#64;outlook.it</a></li>
                 </ul>
             </div>
-    
+
             <!-- Social Media -->
             <div class="footer-social">
                 <h3>Seguici</h3>
@@ -123,29 +132,13 @@
                 </div>
             </div>
         </div>
-    
+
         <!-- Copyright -->
         <div class="footer-bottom">
             <p>&copy; 2025 FSC Racing Team. Tutti i diritti riservati.</p>
         </div>
     </footer>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </body>
 
-
-    <script src="js/script.js"></script>
 </html>

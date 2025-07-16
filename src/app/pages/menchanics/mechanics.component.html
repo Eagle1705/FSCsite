@@ -1,47 +1,54 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team FSC - Mechanics</title>
-    <link rel="stylesheet" href="./mechanics.scss">
-    <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-<link rel="shortcut icon" href="images/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
-<meta name="apple-mobile-web-app-title" content="FSC " />
-<link rel="manifest" href="images/site.webmanifest" />
+    <link rel="stylesheet" href="./mechanics.component.scss">
+    <link rel="icon" type="image/png" href="/assets/images/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="FSC " />
+    <link rel="manifest" href="/assets/images/site.webmanifest" />
 </head>
+
 <body>
     <header class="navbar">
         <div class="navbar-container">
-            <a href="index.html">
-            <img src="images/logo.png" alt="Logo FSC " class="navbar-logo">
+            <a [routerLink]="['/']">
+                <img src="/assets/images/logo.png" alt="Logo FSC " class="navbar-logo">
             </a>
             <nav class="navbar-menu">
                 <ul>
-                    <li><a href="index.html#hero">Chi Siamo?</a></li>
+                    <li><a [routerLink]="['/']" fragment="hero">Chi Siamo?</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-     <!-- Hero Section -->
-     <section id="hero" class="hero">
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
         <!-- Parte sinistra: Titolo -->
         <div class="hero-left">
             <h1 class="hero-title">Reparto Meccanica</h1>
         </div>
         <div class="hero-divider"></div>
 
-    
+
         <!-- Parte destra: Descrizione -->
         <div class="hero-right">
             <p class="hero-description">
-                Il Reparto Meccanica rappresenta il cuore pulsante dell'innovazione tecnica e progettuale del Team FSC. Composto da un gruppo di studenti appassionati e altamente qualificati, il reparto si dedica alla progettazione, sviluppo e realizzazione di componenti meccanici avanzati per la vettura da competizione.
+                Il Reparto Meccanica rappresenta il cuore pulsante dell'innovazione tecnica e progettuale del Team FSC.
+                Composto da un gruppo di studenti appassionati e altamente qualificati, il reparto si dedica alla
+                progettazione, sviluppo e realizzazione di componenti meccanici avanzati per la vettura da competizione.
             </p>
             <p class="hero-description">
-                L'obiettivo principale del team è quello di ottimizzare il comportamento dinamico del veicolo, garantendo prestazioni elevate, affidabilità e sicurezza. Ogni dettaglio, dalla struttura del telaio alla configurazione delle sospensioni, viene studiato con estrema cura utilizzando tecnologie all'avanguardia e software di simulazione avanzati.
+                L'obiettivo principale del team è quello di ottimizzare il comportamento dinamico del veicolo,
+                garantendo prestazioni elevate, affidabilità e sicurezza. Ogni dettaglio, dalla struttura del telaio
+                alla configurazione delle sospensioni, viene studiato con estrema cura utilizzando tecnologie
+                all'avanguardia e software di simulazione avanzati.
             </p>
         </div>
     </section>
@@ -53,14 +60,14 @@
             <!-- Parte sinistra: Responsabile -->
             <div class="team-left">
                 <h2 class="big-title">Dinamica del Veicolo e Sospensioni</h2>
-                
+
                 <div class="responsible-highlight">
                     <!--<img src="images/giorgio-scavo.png" alt="Giorgio Scavo" class="team-image">-->
                     <h3 class="team-responsible">Giorgio Scavo</h3>
                     <p class="team-role">Responsabile Tecnico</p>
                 </div>
             </div>
-    
+
             <!-- Parte destra: Partecipanti con effetto Cards -->
             <div class="team-right">
                 <h3 class="team-title">Membri del Team</h3>
@@ -84,7 +91,7 @@
                         <p class="participant-name">Danilo Chiarenza</p>
                     </div>
                     <div class="card">
-                        <p class="participant-name">Carmelo	Nicolosi</p>
+                        <p class="participant-name">Carmelo Nicolosi</p>
                     </div>
                     <div class="card">
                         <p class="participant-name">Carlo Grasso</p>
@@ -97,11 +104,11 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </section>
-    
-    
+
+
     <div class="divisore"></div>
 
     <section id="aero-section" class="team-section">
@@ -109,9 +116,9 @@
             <!-- Parte sinistra: Responsabile -->
             <div class="team-left">
                 <h2 class="big-title">Aerodinamica del Veicolo</h2>
-                
+
             </div>
-    
+
             <!-- Parte destra: Partecipanti con effetto Cards -->
             <div class="team-right">
                 <h3 class="team-title">Membri del Team</h3>
@@ -136,7 +143,7 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </section>
 
@@ -148,14 +155,14 @@
             <!-- Parte sinistra: Responsabile -->
             <div class="team-left">
                 <h2 class="big-title">Progettazione Meccanica</h2>
-                
+
                 <div class="responsible-highlight">
                     <!--<img src="images/giorgio-scavo.png" alt="Giorgio Scavo" class="team-image">-->
                     <h3 class="team-responsible">Ettore Ragusa</h3>
                     <p class="team-role">Responsabile Tecnico</p>
                 </div>
             </div>
-    
+
             <div class="team-right">
                 <h3 class="team-title">Membri del Team</h3>
                 <div class="participant-cards">
@@ -170,8 +177,8 @@
                     </div>
                 </div>
             </div>
-            
-            
+
+
         </div>
     </section>
 
@@ -181,10 +188,10 @@
         <div class="footer-container">
             <!-- Logo e descrizione -->
             <div class="footer-logo">
-                <img src="images/logo.png" alt="Logo FSC UniCT">
-                
+                <img src="/assets/images/logo.png" alt="Logo FSC UniCT">
+
             </div>
-    
+
             <!-- Navigazione -->
             <div class="footer-nav">
                 <h3>Link Utili</h3>
@@ -195,7 +202,7 @@
                     <li><a href="#Contatti">Contatti</a></li>
                 </ul>
             </div>
-    
+
             <!-- Contatti -->
             <div class="footer-contact">
                 <h3>Contatti</h3>
@@ -203,7 +210,7 @@
                     <li>Email: <a href="mailto:fsc_generale@outlook.it">fsc_generale&#64;outlook.it</a></li>
                 </ul>
             </div>
-    
+
             <!-- Social Media -->
             <div class="footer-social">
                 <h3>Seguici</h3>
@@ -215,15 +222,15 @@
                 </div>
             </div>
         </div>
-    
+
         <!-- Copyright -->
         <div class="footer-bottom">
             <p>&copy; 2025 FSC Racing</p>
         </div>
     </footer>
-    
+
 
 
 </body>
-<script src="js/script.js"></script>
+
 </html>
