@@ -48,7 +48,105 @@
     .body {
         font-family: "Audiowide", sans-serif;
     }
+    
+/* Sezione Contatti */
+.contact-section {
+    background-color: rgba(27, 27, 27, 0.9); /* Sfondo semi-trasparente */
+    padding: 60px 20px;
+    text-align: center;
+    color: #ffffff; /* Testo bianco */
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Ombra per dare profondità */
+    margin: 40px auto;
+    width: 80%; /* Larghezza generale */
+    max-width: 1000px; /* Larghezza massima */
+}
+
+/* Titolo della sezione */
+.contact-section h2 {
+    font-size: 2.5rem; /* Titolo grande e leggibile */
+    color: #e03d1e; /* Verde brillante */
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Tutto maiuscolo */
+    letter-spacing: 2px; /* Spaziatura tra le lettere */
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Effetto ombra */
+}
+
+/* Testo descrittivo */
+.contact-section p {
+    font-size: 1.2em; /* Testo chiaro e leggibile */
+    color: #e0e0e0; /* Grigio chiaro */
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+/* Form Contatti */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Spazio tra gli input */
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%; /* Larghezza del contenitore */
+    max-width: 600px; /* Larghezza massima */
+    padding: 15px;
+    border: 2px solid #e03d1e; /* Bordo verde brillante */
+    border-radius: 5px; /* Angoli arrotondati */
+    background-color: #333333; /* Sfondo scuro */
+    color: #ffffff; /* Testo bianco */
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transizione morbida */
+}
+
+/* Effetto al focus degli input */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #e03d1e; /* Cambia colore del bordo al focus */
+    box-shadow: 0 0 8px #e03d1e; /* Aggiunge un'ombra luminosa */
+    outline: none; /* Rimuove il bordo predefinito */
+}
+
+/* Pulsante di invio */
+.contact-form button {
+    background-color: #e03d1e; /* Verde brillante */
+    color: #ffffff; /* Testo bianco */
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px; /* Pulsante arrotondato */
+    font-size: 1.2em; /* Dimensione del testo */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Effetto hover sul pulsante */
+.contact-form button:hover {
+    background-color: #e03d1e; /* Colore più luminoso */
+    transform: scale(1.05); /* Leggero effetto zoom */
+}
+
+/* Linea separatrice */
+.contact-divider {
+    width: 50%;
+    height: 4px;
+    background: linear-gradient(to right, #e03d1e, #ffffff);
+    margin: 30px auto;
+    border-radius: 2px;
+}
+
     </style>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+  emailjs.init({
+    publicKey: "EZoeTiMOVjbTneoi6",
+  });
+})();
+</script>
 </head>
 <body>
 
@@ -76,12 +174,12 @@
     <section class="form-section">
         <h2>Vieni A Gareggiare Con Noi!</h2>
         <h3>Compila il form e sarai contattato da noi!</h3>
-        <div class="form-container">
-          <!-- Sostituisci l'URL qui con quello del tuo form Google -->
-          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfbZVavJsxDBoxBzApaHR7nDqUIQyT01pm4xxM05TIQktstgg/viewform?embedded=true"
-                  allowfullscreen>
-          </iframe>
-        </div>
+        <form class="contact-form" action="#" method="post" id="contactForm">
+            <input type="text" name="name" placeholder="Il tuo nome" required>
+            <input type="email" name="email" placeholder="La tua email" required>
+            <textarea name="message" rows="5" placeholder="Il tuo messaggio" required></textarea>
+            <button type="submit">Invia</button>
+        </form>
       </section>
 
     </div>
@@ -98,10 +196,8 @@
             <div class="footer-nav">
                 <h3>Link Utili</h3>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#Chisiamo">Chi Siamo</a></li>
-                    <li><a href="#Sponsor">Sponsor</a></li>
-                    <li><a href="#Contatti">Contatti</a></li>
+                    <li><a href="index.html">Home</a></li>
+
                 </ul>
             </div>
     
@@ -149,4 +245,28 @@
 
 
     <script src="js/script.js"></script>
+    <script>
+        document.querySelector("form").addEventListener("submit", function (e) {
+            e.preventDefault(); // Evita il refresh della pagina
+
+            const params = {
+                from_name: document.querySelector('input[name="name"]').value,
+                reply_to: document.querySelector('input[name="email"]').value,
+                message: document.querySelector('textarea[name="message"]').value,
+            };
+
+            const serviceID = "fscsiteform";
+            const templateID = "FSCRACING0101";
+
+            emailjs.send(serviceID, templateID, params)
+                .then(function (response) {
+                    console.log("SUCCESS!", response.status, response.text);
+                    alert("Email inviata con successo!");
+                }, function (error) {
+                    console.log("FAILED...", error);
+                    alert("C'è stato un problema nell'invio dell'email.");
+                });
+        });
+    </script>
+
 </html>
